@@ -1,21 +1,18 @@
 # Seedance 2.5 Script to Prompt Skill
 
-只需放入剧本或用自然语言描述创意，本 Skill 即可生成符合 Seedance 2.5 标准格式的提示词。本 Skill 基于 Seedance 2.5 官方使用手册整理。
-
 Simply provide a script or describe your idea in natural language, and this skill will generate prompts in a standardized format optimized for Seedance 2.5. It is based on the official Seedance 2.5 user guide.
 
-> 这是一个非官方社区项目，与即梦或字节跳动不存在隶属或背书关系。  
 > This is an unofficial community project and is not affiliated with or endorsed by Jimeng or ByteDance.
 
-## 能做什么 / What It Does
+## What It Does
 
-- **输入 / Input：** 接收粘贴文本、自然语言需求、TXT、Markdown、DOCX 或 PDF 剧本。 / Accepts pasted text, natural-language requests, and scripts in TXT, Markdown, DOCX, or PDF format.
-- **内容解析 / Script analysis：** 自动识别角色、场景、对白、动作、声音和成片要求。 / Automatically identifies characters, scenes, dialogue, actions, audio, and production requirements.
-- **自动拆镜 / Shot breakdown：** 自动拆分为适合 Seedance 2.5 生成的镜头。 / Automatically breaks the content into generation-ready shots for Seedance 2.5.
-- **模式选择 / Mode selection：** 自动判断普通生成、超长视频、视频延长、智能编辑、首尾帧等模式。 / Automatically selects standard generation, long-video, video-extension, smart-editing, first-frame, or first-and-last-frame modes.
-- **素材规划 / Asset planning：** 输出角色与场景一致性设定、素材清单以及 `@图/@视频/@音频` 映射。 / Produces character and scene consistency rules, an asset list, and `@image/@video/@audio` mappings.
-- **标准提示词 / Ready-to-use prompts：** 输出可直接复制到 Seedance 2.5 的逐镜提示词。 / Generates shot-by-shot prompts ready to copy into Seedance 2.5.
-- **质量检查 / Quality checks：** 检查时长、台词归属、素材引用和镜头衔接。 / Checks duration, dialogue attribution, asset references, and continuity between shots.
+- **Input:** Accepts pasted text, natural-language requests, and scripts in TXT, Markdown, DOCX, or PDF format.
+- **Script analysis:** Automatically identifies characters, scenes, dialogue, actions, audio, and production requirements.
+- **Shot breakdown:** Automatically breaks the content into generation-ready shots for Seedance 2.5.
+- **Mode selection:** Automatically selects standard generation, long-video, video-extension, smart-editing, first-frame, or first-and-last-frame modes.
+- **Asset planning:** Produces character and scene consistency rules, an asset list, and `@image/@video/@audio` mappings.
+- **Ready-to-use prompts:** Generates shot-by-shot prompts ready to copy into Seedance 2.5.
+- **Quality checks:** Checks duration, dialogue attribution, asset references, and continuity between shots.
 
 ## 安装
 
