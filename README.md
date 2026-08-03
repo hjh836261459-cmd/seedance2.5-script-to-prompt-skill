@@ -1,6 +1,6 @@
 # Seedance 2.5 Script to Prompt Skill
 
-只要放入剧本或者自然语言，就可以输出符合 Seedance 2.5 标准格式的提示词。本 Skill 取材于官方的 Seedance 2.5 使用手册。
+Simply provide a script or describe your idea in natural language, and this skill will generate prompts in a standardized format optimized for Seedance 2.5. It is based on the official Seedance 2.5 user guide.
 
 > 这是一个非官方社区项目，与即梦或字节跳动不存在隶属或背书关系。
 
