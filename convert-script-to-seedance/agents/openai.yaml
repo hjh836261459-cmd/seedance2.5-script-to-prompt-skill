@@ -1,0 +1,7 @@
+interface:
+  display_name: "剧本转 Seedance 2.5"
+  short_description: "把完整剧本自动拆解为 Seedance 2.5 分镜提示词与素材清单"
+  default_prompt: "使用 $convert-script-to-seedance 把我提供的剧本转换成 Seedance 2.5 分镜提示词，并列出需要准备的素材。"
+
+policy:
+  allow_implicit_invocation: true
