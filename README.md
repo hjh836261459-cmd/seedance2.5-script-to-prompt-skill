@@ -1,80 +1,82 @@
 # Seedance 2.5 Script to Prompt Skill
 
-Simply provide a script or describe your idea in natural language, and this skill will generate prompts in a standardized format optimized for Seedance 2.5. It is based on the official Seedance 2.5 user guide.
+Turn a complete script, partial scene, storyboard, image, existing video, or plain-language idea into production-ready Chinese prompts for Jimeng Seedance 2.5.
 
-> This is an unofficial community project and is not affiliated with or endorsed by Jimeng or ByteDance.
+The Skill combines a broad prompt-engineering workflow—camera design, visual direction, image-driven video, storyboard routing, continuity control, and editing rhythm—with a strict script-to-shot production pipeline. Seedance 2.5 capabilities, limits, and mode selection are based on the official Seedance 2.5 user guide supplied for this project.
+
+> This is an unofficial community project. It is not affiliated with or endorsed by Jimeng or ByteDance.
 
 ## What It Does
 
-- **Input:** Accepts pasted text, natural-language requests, and scripts in TXT, Markdown, DOCX, or PDF format.
-- **Script analysis:** Automatically identifies characters, scenes, dialogue, actions, audio, and production requirements.
-- **Shot breakdown:** Automatically breaks the content into generation-ready shots for Seedance 2.5.
-- **Mode selection:** Automatically selects standard generation, long-video, video-extension, smart-editing, first-frame, or first-and-last-frame modes.
-- **Asset planning:** Produces character and scene consistency rules, an asset list, and `@image/@video/@audio` mappings.
-- **Ready-to-use prompts:** Generates shot-by-shot prompts ready to copy into Seedance 2.5.
-- **Quality checks:** Checks duration, dialogue attribution, asset references, and continuity between shots.
+- Accepts natural-language ideas and scripts in pasted text, TXT, Markdown, DOCX, or PDF.
+- Analyzes characters, scenes, dialogue, actions, sound, continuity, and production risks.
+- Supports text generation, multimodal generation, first-frame and first-and-last-frame control, long-video generation, video extension, smart editing, creative transfer, camera reference, audio reference, green screen, white-model rendering, and storyboard-driven production.
+- Converts camera intent into a practical Z/Y/X/F camera description system.
+- Builds observable visual rules for lighting, color, lens, texture, composition, and style locking.
+- Creates a traceable asset ledger with explicit `@图片` / `@视频` / `@音频` responsibilities.
+- Produces either a concise copy-ready prompt or a complete shot plan with assets, continuity rules, prompts, generation order, and risk checks.
 
-## 安装
+## Install
 
-### 下载 ZIP
+Clone the repository directly into the Codex Skills directory:
 
-1. 点击仓库右上角的 **Code → Download ZIP**。
-2. 解压下载文件。
-3. 将其中的 `convert-script-to-seedance` 文件夹复制到 Codex 个人 Skills 目录：
-
-Windows：
-
-```text
-%USERPROFILE%\.codex\skills\convert-script-to-seedance
+```powershell
+git clone https://github.com/hjh836261459-cmd/seedance2.5-script-to-prompt-skill.git "$env:USERPROFILE\.codex\skills\seedance-2-5-script-to-prompt-skill"
 ```
 
-macOS / Linux：
-
-```text
-~/.codex/skills/convert-script-to-seedance
-```
-
-4. 重新打开 Codex 或开始一个新任务。
-
-### Git 克隆
+macOS / Linux:
 
 ```bash
-git clone https://github.com/hjh836261459-cmd/seedance2.5-script-to-prompt-skill.git
+git clone https://github.com/hjh836261459-cmd/seedance2.5-script-to-prompt-skill.git ~/.codex/skills/seedance-2-5-script-to-prompt-skill
 ```
 
-然后把仓库里的 `convert-script-to-seedance` 文件夹复制到 `~/.codex/skills/`。
-
-## 使用
-
-上传剧本后直接说：
+For a ZIP download, extract the repository, rename the extracted folder to `seedance-2-5-script-to-prompt-skill`, and place it inside your Codex Skills directory:
 
 ```text
-用 $convert-script-to-seedance 把这个剧本转换成 Seedance 2.5 分镜提示词，并列出所需素材。
+%USERPROFILE%\.codex\skills\seedance-2-5-script-to-prompt-skill
+~/.codex/skills/seedance-2-5-script-to-prompt-skill
 ```
 
-也可以输入自然语言：
+Restart Codex or begin a new task after installation.
+
+## Use
+
+Invoke it explicitly:
 
 ```text
-制作一条60秒竖屏悬疑短剧，两名角色，写实电影风格。请拆成 Seedance 2.5 分镜，保留全部对白，并保持人物外观一致。
+Use $seedance-2-5-script-to-prompt-skill to convert this script into Seedance 2.5 shot prompts and list every required asset.
 ```
 
-Skill 也支持隐式触发，例如：
+Or ask naturally:
 
 ```text
-把这个剧本转换成 Seedance 2.5 提示词。
+Create a 60-second vertical suspense short with two characters, realistic cinematography, preserved dialogue, and stable character continuity.
 ```
 
-## 默认输出
+```text
+Analyze this image and turn it into a 10-second Seedance 2.5 video prompt with controlled camera movement.
+```
 
-1. 转换摘要
-2. 假设与待确认项
-3. 素材清单
-4. 全局一致性设定
-5. 分镜计划
-6. 可直接复制的逐镜提示词
-7. 生成与拼接顺序
-8. 风险与建议
+```text
+Use this storyboard to generate separate prompts for every panel and provide an editing rhythm plan.
+```
 
-## 来源说明
+## Source Priority
 
-本 Skill 的参数、模式路由和提示词结构，依据 Seedance 2.5 官方使用手册整理并转化为可执行工作流。仓库不包含官方手册原文件，仅包含基于其内容总结的规则和模板。
+When sources disagree, the Skill follows this order:
+
+1. The official Seedance 2.5 user-guide-derived specification bundled in this Skill.
+2. The user's current Seedance interface and explicit instructions.
+3. Reusable camera, aesthetics, production, and editing heuristics adapted from the MIT-licensed `MapleShaw/seedance2.0-prompt-skill` and `ye4wzp/seedance2.5-prompt-skill` projects.
+4. General creative defaults.
+
+The official manual itself is not redistributed in this repository.
+
+## Attribution and License
+
+Camera, aesthetics, production, editing, image-driven, and storyboard methodology in this project incorporates and adapts MIT-licensed work from:
+
+- `MapleShaw/seedance2.0-prompt-skill`
+- `ye4wzp/seedance2.5-prompt-skill`
+
+This repository is released under the MIT License. See `LICENSE`.

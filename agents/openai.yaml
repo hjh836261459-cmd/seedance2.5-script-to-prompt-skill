@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance 2.5 Script to Prompt"
+  short_description: "Create production-ready Seedance 2.5 prompts from any script"
+  default_prompt: "Use $seedance-2-5-script-to-prompt-skill to convert my script or idea into Seedance 2.5 prompts and list the required assets."
